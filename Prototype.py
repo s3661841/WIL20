@@ -4,12 +4,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#TODO: Turn this into a chatbot feature: 
+#Try: https://github.com/AI-Yash/st-chat 
+#or look through https://streamlit.io/components?category=llms 
+#or https://docs.streamlit.io/develop/tutorials/llms/llm-quickstart
+
+st.chat_input("Say something")
 
 # Title
 st.title('Prototype')
 
+
 # Header
 st.header('Data Tables')
+
+#TODO: Turn the data into classes where the tabs will be for displaying data
+st.sidebar.radio('Choose:',[1,2])
 
 # Subheader
 st.subheader('Rain Stations Data')
@@ -34,7 +44,7 @@ scatter_data = rain_stations_data[['Longitude', 'Latitude', 'Elevation', 'Statio
 scatter_data.columns = ['Longitude', 'Latitude', 'Elevation', 'Station_Name']
 
 # Create scatter chart
-scatter_data = scatter_data[scatter_data['Longitude'] >= 110]
+
 st.scatter_chart(scatter_data, x='Longitude', y='Latitude', size='Elevation', color='Station_Name')
 
 '''
