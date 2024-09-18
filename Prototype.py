@@ -21,7 +21,7 @@ rain_scatter.columns = ['Longitude', 'Latitude', 'Elevation', 'Station_Name']
 with st.sidebar:
     selected = option_menu(
         menu_title="Select Data",
-        options=["Rain Stations Data", "Table 2 Data", "Table 3 Data"],
+        options=["Rain Stations Data", "Table 2 Data", "Table 3 Data", "Chatbot"],
         icons=["cloud-rain", "table", "table"],
         menu_icon="cast",
         default_index=0,
@@ -41,7 +41,11 @@ elif selected == "Table 3 Data":
     Table_3_table_df = './Data/Table 3_table.csv'
     Table_3_table_data = pd.read_csv(Table_3_table_df)
     st.table(Table_3_table_data)
-
+elif selected == "Chatbot":
+    st.subheader('Chatbot')
+    st.chatbot
+    
+    
 # Chatbot feature
 st.subheader('Chat with the Bot')
 chatbot = Chatbot()
