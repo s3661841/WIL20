@@ -42,8 +42,3 @@ class ScatterplotVisualizer:
         r = pdk.Deck(layers=[self.scatterplot_layer], initial_view_state=self.view_state, tooltip=self.tooltip)
         st.pydeck_chart(r)
 
-# Example usage:
-# import pandas as pd
-# rain_scatter = pd.read_csv('path_to_your_data.csv')
-# visualizer = ScatterplotVisualizer(rain_scatter)
-# visualizer.render()
