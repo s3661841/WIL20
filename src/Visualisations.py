@@ -29,12 +29,18 @@ class ScatterplotVisualizer:
         )
 
     def create_tooltip(self):
+
         return {
-            "html": "<b>Station Name:</b> {Station_Name}<br/>"
-                    "<b>Elevation:</b> {Elevation} meters",
+            "html": "<b>Site Number:</b> {site_number}<br/>"
+                "<b>Site Name:</b> {site_name}<br/>"
+                "<b>Avg Max Temp (°C):</b> {avg_max_temp}<br/>"
+                "<b>Avg Min Temp (°C):</b> {avg_min_temp}<br/>"
+                "<b>Avg Mean Temp (°C):</b> {avg_mean_temp}<br/>"
+                "<b>Elevation:</b> {Elevation} meters<br/>"
+                "<b>Koppen Classification:</b> {Koppen_Classification}",
             "style": {
-                "backgroundColor": "steelblue",
-                "color": "white"
+            "backgroundColor": "steelblue",
+            "color": "white"
             }
         }
 

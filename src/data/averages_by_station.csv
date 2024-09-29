@@ -1,0 +1,113 @@
+site_number,site_name,avg_max_temp,avg_min_temp,avg_mean_temp,Latitude,Longitude,Elevation,Koppen_Classification
+31011,CAIRNS AERO,29,20,25,-16.87,145.75,2,Tropical rainforest (monsoonal)
+18012,CEDUNA AMO,23,10,17,-32.13,133.7,15,"Grassland (warm, summer drought)"
+30124,GEORGETOWN AIRPORT,32,18,25,-18.3,143.53,302,Tropical savanna
+52088,WALGETT AIRPORT AWS,27,11,19,-30.04,148.12,133,"Grassland (hot, persistently dry)"
+86338,MELBOURNE (OLYMPIC PARK),19,11,15,-37.83,144.98,8,"Temperate (no dry season, warm summer)"
+48245,BOURKE AIRPORT AWS,28,13,20,-30.04,145.95,107,"Grassland (hot, persistently dry)"
+84145,ORBOST,20,10,15,-37.69,148.47,63,"Temperate (no dry season, warm summer)"
+40004,AMBERLEY AMO,27,12,20,-27.63,152.71,24,Subtropical (no dry season)
+6011,CARNARVON AIRPORT,28,17,22,-24.89,113.67,4,"Desert (hot, summer drought)"
+27058,HORN ISLAND,30,24,27,-10.58,142.29,4,Equatorial savanna
+90015,CAPE OTWAY LIGHTHOUSE,17,11,14,-38.86,143.51,82,"Temperate (no dry season, warm summer)"
+36007,BARCALDINE POST OFFICE,30,17,24,-23.55,145.29,267,"Grassland (hot, persistently dry)"
+32040,TOWNSVILLE AERO,29,20,25,-19.25,146.77,4,Tropical savanna
+30161,RICHMOND AIRPORT,33,16,25,-20.7,143.11,206,"Grassland (hot, winter drought)"
+37010,CAMOOWEAL TOWNSHIP,33,17,25,-19.92,138.12,231,"Desert (hot, winter drought)"
+42112,MILES CONSTANCE STREET,27,12,20,-26.66,150.18,305,Subtropical (no dry season)
+33119,MACKAY M.O,26,19,22,-21.12,149.22,30,Subtropical (distinctly dry winter)
+5098,KARIJINI NORTH,33,19,26,-22.3,118.45,474,"Grassland (hot, persistently dry)"
+72161,CABRAMURRA SMHEA AWS,12,5,8,-35.94,148.38,1482,"Temperate (no dry season, mild summer)"
+3003,BROOME AIRPORT,32,22,27,-17.95,122.24,7,"Grassland (hot, winter drought)"
+38026,BIRDSVILLE AIRPORT,31,16,24,-25.9,139.35,47,"Desert (hot, persistently dry)"
+94029,HOBART (ELLERSLIE ROAD),17,9,13,-42.89,147.33,51,"Temperate (no dry season, mild summer)"
+82039,RUTHERGLEN RESEARCH,21,6,14,-36.1,146.51,175,"Temperate (no dry season, hot summer)"
+10916,KATANNING,22,9,15,-33.69,117.61,320,Temperate (distinctly dry and warm summer)
+9518,CAPE LEEUWIN,20,14,17,-34.37,115.14,13,Temperate (distinctly dry and warm summer)
+85072,EAST SALE,20,8,14,-38.12,147.13,5,"Temperate (no dry season, warm summer)"
+15135,TENNANT CREEK AIRPORT,32,20,26,-19.64,134.18,376,"Grassland (hot, winter drought)"
+92045,LARAPUNA (EDDYSTONE POINT),18,10,14,-40.99,148.35,20,"Temperate (no dry season, mild summer)"
+80023,KERANG,23,9,16,-35.72,143.92,82,"Grassland (warm, persistently dry)"
+39083,ROCKHAMPTON AERO,29,16,23,-23.38,150.48,10,Subtropical (moderately dry winter)
+43109,ST GEORGE AIRPORT,27,13,20,-28.05,148.6,199,"Grassland (hot, persistently dry)"
+85096,WILSONS PROMONTORY LIGHTHOUSE,16,12,14,-39.13,146.42,95,"Temperate (no dry season, warm summer)"
+10917,WANDERING,23,8,15,-32.67,116.67,275,Temperate (distinctly dry and hot summer)
+12038,KALGOORLIE-BOULDER AIRPORT,25,12,18,-30.78,121.45,365,"Desert (hot, persistently dry)"
+15590,ALICE SPRINGS AIRPORT,29,12,20,-23.8,133.89,546,"Grassland (hot, persistently dry)"
+9021,PERTH AIRPORT,24,12,18,-31.93,115.98,15,Subtropical (distinctly dry summer)
+28004,PALMERVILLE,33,18,25,-16.0,144.08,204,Tropical savanna
+60168,PORT MACQUARIE AIRPORT AWS,23,11,17,-31.43,152.87,4,"Temperate (no dry season, hot summer)"
+74258,DENILIQUIN AIRPORT AWS,23,9,16,-35.56,144.95,94,"Grassland (warm, persistently dry)"
+23000,ADELAIDE (WEST TERRACE / NGAYIRDAPIRA),22,12,17,-34.93,138.58,29,Temperate (distinctly dry and hot summer)
+21133,RAYVILLE PARK,23,9,16,-33.77,138.22,109,Temperate (distinctly dry and hot summer)
+11052,FORREST,26,10,18,-30.85,128.11,159,"Desert (warm, persistently dry)"
+53115,MOREE AERO,27,12,19,-29.49,149.85,213,Subtropical (moderately dry winter)
+46012,WILCANNIA AERODROME AWS,26,11,19,-31.52,143.39,94,"Grassland (hot, persistently dry)"
+11003,EUCLA,22,12,17,-31.68,128.9,93,"Grassland (warm, persistently dry)"
+36031,LONGREACH AERO,31,15,23,-23.44,144.28,192,"Grassland (hot, persistently dry)"
+7045,MEEKATHARRA AIRPORT,29,16,22,-26.61,118.54,517,"Grassland (hot, summer drought)"
+70351,CANBERRA AIRPORT,19,6,12,-35.31,149.2,577,"Temperate (no dry season, warm summer)"
+4032,PORT HEDLAND AIRPORT,33,19,26,-20.37,118.63,6,"Desert (hot, persistently dry)"
+9617,BRIDGETOWN,22,8,15,-33.95,116.13,179,Temperate (distinctly dry and warm summer)
+94220,GROVE (RESEARCH STATION),18,5,11,-42.98,147.08,65,"Temperate (no dry season, mild summer)"
+78015,NHILL AERODROME,21,8,15,-36.31,141.65,139,"Grassland (warm, persistently dry)"
+2079,HALLS CREEK AIRPORT,33,19,26,-18.23,127.67,409,"Grassland (hot, winter drought)"
+34084,CHARTERS TOWERS AIRPORT,30,16,23,-20.05,146.27,290,"Grassland (hot, winter drought)"
+87031,LAVERTON RAAF,19,9,14,-37.86,144.76,20,"Temperate (no dry season, warm summer)"
+39128,BUNDABERG AERO,27,15,21,-24.91,152.32,31,Subtropical (no dry season)
+4106,MARBLE BAR,35,19,27,-21.18,119.75,182,"Desert (hot, winter drought)"
+48027,COBAR MO,26,3,19,-31.48,145.83,260,"Grassland (hot, persistently dry)"
+23373,NURIOOTPA PIRSA,21,9,15,-34.48,139.01,275,Temperate (distinctly dry and warm summer)
+69018,MORUYA HEADS PILOT STATION,20,11,16,-35.91,150.15,17,"Temperate (no dry season, warm summer)"
+67105,RICHMOND RAAF,24,11,18,-33.6,150.78,19,"Temperate (no dry season, hot summer)"
+39066,GAYNDAH AIRPORT,28,14,21,-25.62,151.62,111,Subtropical (no dry season)
+76031,MILDURA AIRPORT,24,10,17,-34.24,142.09,50,"Grassland (warm, persistently dry)"
+65070,DUBBO AIRPORT AWS,24,10,17,-32.22,148.58,284,"Temperate (no dry season, hot summer)"
+26021,MOUNT GAMBIER AERO,19,8,14,-37.75,140.77,63,Temperate (distinctly dry and warm summer)
+61363,SCONE AIRPORT AWS,24,10,17,-32.03,150.83,221,"Temperate (no dry season, hot summer)"
+15666,RABBIT FLAT,34,17,25,-20.18,130.01,340,"Grassland (hot, winter drought)"
+18044,KYANCUTTA,25,9,17,-33.13,135.55,59,"Grassland (warm, summer drought)"
+18192,PORT LINCOLN AWS,20,11,16,-34.6,135.88,9,Temperate (distinctly dry and warm summer)
+14015,DARWIN AIRPORT,32,23,27,-12.42,130.89,30,Equatorial savanna
+55024,GUNNEDAH RESOURCE CENTRE,25,12,18,-31.03,150.27,307,"Temperate (no dry season, hot summer)"
+16001,WOOMERA AERODROME,26,13,19,-31.16,136.81,167,"Desert (hot, persistently dry)"
+56242,INVERELL (RAGLAN ST),23,7,15,-29.78,151.11,582,"Temperate (no dry season, hot summer)"
+72150,WAGGA WAGGA AMO,22,8,15,-35.16,147.46,212,"Temperate (no dry season, hot summer)"
+91293,LOW HEAD,16,10,13,-41.05,146.79,3,"Temperate (no dry season, mild summer)"
+84016,GABO ISLAND LIGHTHOUSE,18,12,15,-37.57,149.92,15,"Temperate (no dry season, warm summer)"
+40842,BRISBANE AERO,25,15,20,-27.39,153.13,5,Subtropical (no dry season)
+9789,ESPERANCE,21,12,16,-33.83,121.89,25,Temperate (distinctly dry and warm summer)
+8296,MORAWA AIRPORT,27,13,20,-29.2,116.02,271,"Grassland (hot, summer drought)"
+8297,DALWALLINU,26,11,19,-30.28,116.67,325,"Grassland (hot, summer drought)"
+40043,CAPE MORETON LIGHTHOUSE,24,18,21,-27.03,153.47,100,Subtropical (no dry season)
+45025,THARGOMINDAH AIRPORT,29,16,23,-27.99,143.82,131,"Grassland (hot, persistently dry)"
+91311,LAUNCESTON AIRPORT,18,6,12,-41.55,147.22,167,"Temperate (no dry season, mild summer)"
+5007,LEARMONTH AIRPORT,32,17,24,-22.24,114.1,5,"Grassland (hot, summer drought)"
+66214,SYDNEY (OBSERVATORY HILL),23,14,19,-33.86,151.2,43,"Temperate (no dry season, hot summer)"
+68072,NOWRA RAN AIR STATION AWS,22,11,17,-34.95,150.54,109,"Temperate (no dry season, warm summer)"
+61078,WILLIAMTOWN RAAF,23,12,18,-32.79,151.84,8,"Temperate (no dry season, hot summer)"
+22823,CAPE BORDA,19,12,15,-35.75,136.6,158,Temperate (distinctly dry and warm summer)
+59151,COFFS HARBOUR AIRPORT,24,14,19,-30.32,153.12,4,Subtropical (no dry season)
+94198,CAPE BRUNY (CAPE BRUNY),16,9,12,-43.49,147.14,60,"Temperate (no dry season, mild summer)"
+29077,BURKETOWN AIRPORT,33,20,26,-17.75,139.54,6,"Grassland (hot, winter drought)"
+17043,OODNADATTA AIRPORT,29,15,22,-27.56,135.45,117,"Desert (hot, persistently dry)"
+8315,GERALDTON AIRPORT,26,13,19,-28.8,114.7,30,Subtropical (distinctly dry summer)
+46126,TIBOOBURRA AIRPORT,27,14,21,-29.44,142.06,176,"Desert (hot, persistently dry)"
+26026,ROBE,18,11,15,-37.16,139.76,3,Temperate (distinctly dry and warm summer)
+27045,WEIPA AERO,33,22,27,-12.68,141.92,18,Equatorial savanna
+63005,BATHURST AGRICULTURAL STATION,20,6,13,-33.43,149.56,713,"Temperate (no dry season, warm summer)"
+96003,BUTLERS GORGE,13,3,8,-42.28,146.28,667,"Temperate (no dry season, mild summer)"
+68151,POINT PERPENDICULAR AWS,20,14,17,-35.09,150.8,85,"Temperate (no dry season, warm summer)"
+29063,NORMANTON AIRPORT,33,21,27,-17.69,141.07,18,"Grassland (hot, winter drought)"
+44021,CHARLEVILLE AERO,28,13,20,-26.41,146.26,302,"Grassland (hot, persistently dry)"
+50017,WEST WYALONG AIRPORT AWS,23,9,16,-33.94,147.2,257,"Temperate (no dry season, hot summer)"
+10286,CUNDERDIN AIRFIELD,25,10,18,-31.62,117.22,217,"Grassland (hot, summer drought)"
+17126,MARREE AERO,28,13,21,-29.66,138.07,50,"Desert (hot, persistently dry)"
+38003,BOULIA AIRPORT,31,17,24,-22.91,139.9,162,"Desert (hot, persistently dry)"
+13017,GILES METEOROLOGICAL OFFICE,29,16,23,-25.03,128.3,598,"Desert (hot, persistently dry)"
+9999,ALBANY AIRPORT,20,10,15,-34.94,117.82,68,Temperate (distinctly dry and warm summer)
+1019,KALUMBURU,35,20,27,-14.3,126.65,23,Tropical savanna
+14825,VICTORIA RIVER DOWNS,35,20,27,-16.4,131.01,89,"Grassland (hot, winter drought)"
+16098,TARCOOLA AERO,27,11,19,-30.71,134.58,123,"Desert (hot, persistently dry)"
+10092,MERREDIN,25,11,18,-31.48,118.28,315,"Grassland (warm, summer drought)"
+58012,YAMBA PILOT STATION,24,15,20,-29.43,153.36,27,Subtropical (no dry season)

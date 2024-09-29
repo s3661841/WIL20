@@ -11,17 +11,21 @@ class Chatbot:
     def __init__(self, model_name="llama3"):
         
         # Load the data
-        self.file_path = "./src/data/rain_stations_df.csv"
-        self.rain_data = pd.read_csv(self.file_path)
+        self.weather_file_path = "./src/data/averages_by_station.csv"
+        self.weather_data = pd.read_csv(self.weather_file_path)
+        
+        self.crop_path = "./src/data/CropConditionData.csv"
+        self.crop_data = pd.read_csv(self.crop_path)
         
         # Convert the DataFrame to a string representation to include in the prompt
-        self.rain_data_str = self.rain_data.to_csv(index=False)
+        self.weather_data_str = self.weather_data.to_csv(index=False)
+        self.crop_data_str = self.crop_data.to_csv(index=False)
         
-        # Update the prompt to include the CSV data
+        # prompt also includes csv file
         self.prompt = ChatPromptTemplate.from_messages(
             [
                 ("system", f"You are a crop scientist and you are getting asked where in Australia would be best to grow crops per user's question. \
-                 Please refer to the attached files for related data.\n\n{self.rain_data_str}"), 
+                 Please refer to the attached files for related data.\n\n{self.weather_data_str} \n\n{self.crop_data_str}"), 
                 ("user", "Question:{question}")
             ]
         )

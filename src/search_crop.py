@@ -7,41 +7,48 @@ class CropRecommendation:
         # Load crop and station data
         self.crop_data = pd.read_csv(crop_data_path)
         self.station_data = pd.read_csv(station_data_path)
-
+        
     def get_station_data(self, station_name):
-        # Check if 'Station_Name' column exists
-        self.station_data = self.station_data[['Longitude', 'Latitude', 'Elevation', 'Station Name']]
-        self.station_data.rename(columns={'Station_Name': 'Station Name'}, inplace=True)
-        self.station_data.columns = ['Longitude', 'Latitude', 'Elevation', 'Station_Name']
-        self.station_data['Elevation'] = self.station_data['Elevation'].astype(int)
+        # Ensure station_name is a scalar value and not a Series
+        if isinstance(station_name, pd.Series):
+            station_name = station_name.iloc[0]
+            st.write(station_name)
         
-        if 'Station_Name' not in self.station_data.columns:
-            raise KeyError("The column 'Station_Name' does not exist in the station data.")
-        
-        # Filter the DataFrame for the given station name
-        self.station = self.station_data[self.station_data['Station_Name'] == station_name]
+        self.station = self.station_data[self.station_data['site_name'] == station_name]
         return self.station
-    
-    def get_station_elevation(self, station_name):
-        # Get the station data for the given station name
+
+    def get_station_avg_temps(self, station_name):
         self.station = self.get_station_data(station_name)
         
-        # Extract the elevation from the station data
-        self.elevation = self.station['Elevation'].values[0]
+        # Check if station data is found
+        st.write(self.station)
+        st.write(self.station.empty)
+        st.write(station_name)
+        if self.station.empty:
+            st.error(f"No data found for station: {station_name}")
+            return None, None, None  # Return None or some default value
         
-        # Get the recommended crops based on the elevation
-        self.recommended_crops = self.recommend_crop(self.elevation)
+        # If station exists, extract the temperatures
+        self.avg_min_temp = self.station['avg_min_temp'].values[0]
+        self.avg_max_temp = self.station['avg_max_temp'].values[0]
+        self.avg_mean_temp = self.station['avg_mean_temp'].values[0]
         
-        return self.recommended_crops
-    
-    def reconmend_crop(self, elevation):
-        # Define the crop recommendation logic based on elevation
-        
+        return self.avg_min_temp, self.avg_max_temp, self.avg_mean_temp
+
+
+    def reconmend_crop(self, station_name):
         self.suggested_crops = []
         
+        # Get the average mean temperature for the station
+        avg_mean_temp = self.get_station_avg_temps(station_name)[1]
         
-        for crops in self.crop_data.itertuples():
-            if elevation >= crops[''] and elevation <= crops.Upper_Elevation:
-                self.min_values[crops.Crop] = crops.Min_Temperature
-                self.max_values[crops.Crop] = crops.Max_Temperature
+        # Check if avg_mean_temp is valid
+        if avg_mean_temp is None:
+            return []  # Return an empty list if the station data is not found
         
+        # Iterate through the crop data to find crops that fit the mean temperature range
+        for crop in self.crop_data.itertuples():
+            if crop.avg_min_temp <= avg_mean_temp <= crop.avg_max_temp:
+                self.suggested_crops.append(crop.Crop)
+                
+        return self.suggested_crops
