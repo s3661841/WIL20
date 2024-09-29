@@ -1,54 +1,54 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from streamlit_option_menu import option_menu
 from src.chat import Chatbot
+from src.dataframes import RainStationDF, CropConditionDF
+from src.Visualisations import ScatterplotVisualizer
+from src.search_crop import CropRecommendation
+
+#layout setting
+st.set_page_config(layout="wide")
 
 # Title
-st.title('Prototype')
+st.title('Crop Recommendation System')
+if st.button('Home'):
+    st.rerun()
 
-# Load rain_stations_df
-rain_stations_df = './Data/rain_stations_df.csv'
-rain_stations_data = pd.read_csv(rain_stations_df)
+# Load the data
+rain_stations_df = './src/data/averages_by_station.csv'
+rain_scatter = RainStationDF(rain_stations_df)
 
-# Prepare data for map visualization
-rain_scatter = rain_stations_data[['Longitude', 'Latitude', 'Elevation', 'Station Name']]
-rain_scatter.columns = ['Longitude', 'Latitude', 'Elevation', 'Station_Name']
+CropCondition_df = './src/data/CropConditionData.csv'
+CropCondition_data = CropConditionDF(CropCondition_df)
 
-# Sidebar with tabs
-with st.sidebar:
-    selected = option_menu(
-        menu_title="Select Data",
-        options=["Rain Stations Data", "Table 2 Data", "Table 3 Data", "Chatbot"],
-        icons=["cloud-rain", "table", "table"],
-        menu_icon="cast",
-        default_index=0,
-    )
+# Initialize the functions
+visualizer = ScatterplotVisualizer(rain_scatter)
+Recommendation = CropRecommendation(CropCondition_df, rain_stations_df)
 
-# Display selected data
-if selected == "Rain Stations Data":
-    st.subheader('Rain Stations Data')
-    st.scatter_chart(rain_scatter, x='Longitude', y='Latitude', size='Elevation', color='Station_Name')
-elif selected == "Table 2 Data":
-    st.subheader('Table 2 Data')
-    Table_2_table_df = './Data/Table 2_table.csv'
-    Table_2_table_data = pd.read_csv(Table_2_table_df)
-    st.table(Table_2_table_data)
-elif selected == "Table 3 Data":
-    st.subheader('Table 3 Data')
-    Table_3_table_df = './Data/Table 3_table.csv'
-    Table_3_table_data = pd.read_csv(Table_3_table_df)
-    st.table(Table_3_table_data)
-elif selected == "Chatbot":
-    st.subheader('Chatbot')
-    st.chatbot
-    
-    
-# Chatbot feature
-st.subheader('Chat with the Bot')
-chatbot = Chatbot()
+# Full width for each section
+st.subheader('Chatbot')
+with st.container():
+    chatbot = Chatbot()
+    question = st.text_input('Enter your question:', key='chat')
+    if st.button('Ask Question', key='ask'):
+        response = chatbot.ask_question(question)
+        st.write(response)
 
-if __name__ == "__main__":
-    chatbot
+st.markdown("---")  # Line divider between sections
+
+# Bottom section: Map and Recommend using full width
+map_recommend_cols = st.columns([1, 1])  # Use equal width for both columns
+
+with map_recommend_cols[0]:
+    st.subheader('Map')
+    st.write('Weather Map')
+    visualizer.render()  # Render the map visualizer
+
+with map_recommend_cols[1]:
+    st.subheader('Recommend')
+    st.write('Enter the station name to get crop recommendations:')
+    station_name = st.text_input('Station Name:', key='station')
+    if st.button('Get Recommendations', key='recommend'):
+        station = Recommendation.get_station_data(station_name)
+        st.write(station)
+        if station is not None:
+            suitable_crops = Recommendation.reconmend_crop(station['Elevation'])
+            st.table(suitable_crops)
